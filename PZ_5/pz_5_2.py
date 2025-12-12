@@ -18,7 +18,6 @@ def DigitCountSum(K, C, S):
         S += digit
         C += 1
         temp //= 10
-
     return C, S
 
 try:
