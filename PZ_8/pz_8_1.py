@@ -1,3 +1,5 @@
+# Выведите 'history' из вложенного словаря:
+
 sampleDict = {
     "class": {
         "student": {
