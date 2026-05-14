@@ -34,5 +34,5 @@ for month, temp in temperature_dict.items():
     else:
         print(f"Год: {temp}")
 
-print(f"\nСредняя температура за год: {avg_temp:.1f}°C")
+print(f"\nСредняя температура за год: {avg_temp}°C")
 print(f"Минимальная температура за год: {min_temp}°C")
