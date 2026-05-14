@@ -27,7 +27,7 @@ def find_min(temp_list):
 avg_temp = calculate_average(temperatures)
 min_temp = find_min(temperatures)
 
-print("Словарь с температурами по месяцам:")
+print("Месяц и температура:")
 for month, temp in temperature_dict.items():
     if month != 'Год':
         print(f"{month}: {temp}°C")
