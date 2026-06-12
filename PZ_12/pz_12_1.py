@@ -4,15 +4,10 @@
 import random
 
 # Генерируем случайную матрицу размером 4x4
-n = 4  # количество строк
-m = 4  # количество столбцов
+n = int(input("Введите количество строк: "))  # количество строк
+m = int(input("Введите количество столбцов: "))  # количество столбцов
 
-matrix = []
-for i in range(n):
-    row = []
-    for j in range(m):
-        row.append(random.randint(1, 10))
-    matrix.append(row)
+matrix = [[random.randint(1, 10) for j in range(m)] for i in range(n)]
 
 print("Исходная случайная матрица:")
 for i in range(len(matrix)):
@@ -35,11 +30,13 @@ print()
 # Вторая половина (нижняя половина матрицы)
 print()
 print("Вторая половина матрицы:")
-summa = 0
+
 half = n // 2
-for i in range(half, n):
-    for j in range(m):
-        summa = summa + matrix[i][j]
-        print("Добавляем элемент", matrix[i][j])
+
+second_half_elements = [matrix[i][j] for i in range(half, n) for j in range(m)]
+
+list(map(lambda x: print("Добавляем элемент", x), second_half_elements))
+
+summa = sum(second_half_elements)
 
 print("Сумма элементов нижней половины матрицы:", summa)

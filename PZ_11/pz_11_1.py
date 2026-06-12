@@ -5,11 +5,10 @@ import random
 
 # Генерируем случайную последовательность целых чисел
 # Длина последовательности
-n = random.randint(5, 15)
+n = int(input("Введите длину последовательности: "))
 
-a = []
-for i in range(n):
-    a.append(random.randint(-10, 10))
+a = list(map(lambda _: random.randint(-10, 10), range(n)))
+
 print("Исходная последовательность:")
 print(a)
 
